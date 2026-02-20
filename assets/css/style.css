@@ -1,0 +1,254 @@
+:root {
+    --bg-dark: #1e1e1e;
+    --text-light: #ffffff;
+    --text-dark: #2d3748;
+    --text-muted: #718096;
+    --accent: #ffffff;
+    --accent-secondary: #667eea;
+    --bg-body: #f7fafc;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: var(--text-light);
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 180px; /* Space for the wave backdrop */
+    position: relative;
+    z-index: 10;
+}
+
+.header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -120px; /* Overlap the wave even more */
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* Box shadow removed */
+    transform: rotate(-3deg) scale(1);
+    max-height: 480px; /* Slightly larger */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.header-image img:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+
+.header-text {
+    flex: 1;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Help text stand out on backdrop */
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #1a202c;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 11; /* Ensure button is above backdrop */
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+}
+
+/* Wave Backdrop */
+.wave-container {
+    line-height: 0;
+    width: 100%;
+    position: absolute; /* Set as backdrop */
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; /* Don't block clicks */
+}
+
+.wave-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 360px; /* Taller backdrop */
+}
+
+/* Main Content */
+main {
+    padding: 0 0 100px 0; /* Top padding removed */
+}
+
+.content-container {
+    max-width: 900px;
+}
+
+/* Typography for Markdown Content */
+main h1, main h2, main h3 {
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    color: #1a202c;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+main h1:first-of-type {
+    margin-top: 2rem; /* Add some top margin for the first heading to breathe */
+}
+
+main h1 { font-size: 2.25rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+main h2 { font-size: 1.875rem; }
+main h3 { font-size: 1.5rem; }
+
+main p {
+    line-height: 1.8;
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+main ul, main ol {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+/* Feature Grid Styling */
+/* Target the first UL after the first H1 (Features) */
+main h1:first-of-type + ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+}
+
+main h1:first-of-type + ul li {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #edf2f7;
+}
+
+main h1:first-of-type + ul li:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+main h1:first-of-type + ul li strong {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2b6cb0; /* Accent color for titles */
+}
+
+/* Footer */
+footer {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .header-image img {
+        transform: rotate(0);
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+        .subtitle {
+    
+            font-size: 1.125rem;
+    
+        }
+
+        .btn-download {
+    
+            display: block;
+    
+            margin: 10px auto;
+    
+            max-width: 250px;
+    
+        }
+    
+    }
+    
+    

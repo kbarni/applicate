@@ -1,0 +1,9 @@
+title: "Applicate"
+subtitle: "Jekyll landing page for your app"
+description: "Simple but elegant landing page to present your project or app."
+header_image: "assets/images/screenshot.png"
+download_url: "https://github.com/kbarni/applicate"
+download_text: "Get it on Github"
+footer_text: "(C) 2026 kbarni"
+markdown: kramdown
+theme: null

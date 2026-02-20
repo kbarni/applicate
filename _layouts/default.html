@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <!-- Wave Backdrop -->
+    <div class="wave-container">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1440 180"
+   fill="none"
+   preserveAspectRatio="none"
+   version="1.1"
+   id="svg1474"
+   sodipodi:docname="bla.svg"
+   width="1440"
+   height="160"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1478" />
+  <sodipodi:namedview
+     id="namedview1476"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.5418201"
+     inkscape:cx="836.99368"
+     inkscape:cy="-256.54271"
+     inkscape:window-width="1880"
+     inkscape:window-height="1052"
+     inkscape:window-x="40"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1474" />
+  <path
+     fill="#f7fafc"
+     fill-opacity="1"
+     d="m 0,40 120.86962,8.06504 c 49.34284,3.2924 192.13186,26.02404 278.77712,26.29818 95.99952,0.30374 253.18731,-32.76389 377.10194,-32.2757 164.78629,8.55529 200.76407,32.24118 308.09262,30.63244 96,0 212.6704,-28.84079 261.9395,-24.58481 l 96.6894,7.947089 -0.1266,37.614601 h -48 -240 -287.99999 -288 -288 H 51.343606 L 0.64439377,93.889021 Z"
+     id="path1472-3-6"
+     style="fill:#274d66;fill-opacity:1;stroke-width:0.862327"
+     sodipodi:nodetypes="cssccscccccccccc" />
+  <path
+     fill="#f7fafc"
+     fill-opacity="1"
+     d="M 2.3509539,85.09556 92.309111,76.03025 C 141.51248,71.0719 271.21723,63.55904 354.50896,72.44606 c 95.45817,10.18516 237.26474,14.70607 333.26474,2.80833 96,-11.89773 85.19715,-3.69735 181.91861,-5.28354 77.5952,-1.27253 134.35389,-1.4448 230.26429,2.70301 90.7841,3.92612 171.1114,20.40848 276.3925,14.35427 l 65.744,-3.78063 -0.7595,49.92952 h -48 -240 -288 -288 -288 H 49.333595 1.3335951 Z"
+     id="path1472-3"
+     style="fill:#8bb6d3;fill-opacity:1;stroke-width:0.862327"
+     sodipodi:nodetypes="csssssscccccccccc" />
+  <!-- Background Layer 1 -->
+  <!-- Background Layer 2 -->
+  <!-- Main Front Layer -->
+  <path
+     fill="#f7fafc"
+     fill-opacity="1"
+     d="M -0.32538552,61.432965 50.050918,73.82928 c 48.020063,11.816505 150.691812,23.87271 246.691812,23.87271 96,0 185.30819,-11.97497 281.30819,-23.87271 96,-11.89773 192,-11.89773 288,0 96,11.89774 191.99998,35.69321 287.99998,35.69321 96,0 159.601,-25.173547 240,-32.457335 16.363,-1.482413 49.2372,-2.28005 49.2372,-2.28005 l -1.2372,106.123785 h -48 -240 -287.99998 -288 -288 -240.000002 -48 z"
+     id="path1472"
+     style="stroke-width:0.862327"
+     sodipodi:nodetypes="csssssacccccccccc" />
+</svg>
+</div>
+    <div class="container header-container">
+        <div class="header-image">
+            <img src="{{ site.header_image | relative_url }}" alt="App Screenshot">
+        </div>
+        <div class="header-text">
+            <h1>{{ site.title }}</h1>
+            <p class="subtitle">{{ site.subtitle }}</p>
+            <a href="{{ site.download_url }}" class="btn-download">{{ site.download_text }}</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container content-container">
+        {{ content }}
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>{{ site.footer_text }}</p>
+    </div>
+</footer>
+
+</body>
+</html>
