@@ -4,6 +4,8 @@ Applicate is a modern, responsive landing page theme for software projects or ap
 
 ![Applicate Screenshot](assets/images/screenshot.png)
 
+[**🚀 Live Demo**](https://kbarni.github.io/applicate/)
+
 ## Features
 
 - **Fast & Lightweight:** Minimalist design focused on speed and content.
